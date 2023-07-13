@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.layout-container {
+  @apply flex flex-col max-w-full w-screen;
+}
+.layout-section {
+  @apply flex flex-col self-center max-w-[1520px] w-full px-10 py-5 max-md:p-4;
+}
