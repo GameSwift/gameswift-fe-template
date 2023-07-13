@@ -1,4 +1,6 @@
+import clsx from 'clsx'
 import { LinkProps } from 'next/link'
+import { usePathname } from 'next/navigation'
 import { Link } from '@/components'
 
 type NavLinkProps = {
@@ -7,15 +9,24 @@ type NavLinkProps = {
   onClick: VoidFunction
 }
 
-export const NavLink: React.FC<NavLinkProps> = ({ href, text, onClick }) => (
-  <li>
-    <Link
-      onClick={onClick}
-      href={href}
-    >
-      <p className="font-secondary text-lg text-gray-600 transition-colors duration-150 hover:text-secondary-400 max-md:text-base">
-        {text}
-      </p>
-    </Link>
-  </li>
-)
+export const NavLink: React.FC<NavLinkProps> = ({ href, text, onClick }) => {
+  const pathname = usePathname()
+
+  return (
+    <li>
+      <Link
+        onClick={onClick}
+        href={href}
+      >
+        <p
+          className={clsx(
+            'font-secondary text-lg text-gray transition-colors duration-150 hover:text-white max-md:text-base',
+            pathname === href && 'text-white'
+          )}
+        >
+          {text}
+        </p>
+      </Link>
+    </li>
+  )
+}

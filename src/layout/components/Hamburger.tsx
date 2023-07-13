@@ -12,25 +12,25 @@ export const Hamburger: React.FC<HamburgerProps> = ({ isOpen, onToggle }) => (
   >
     <div
       className={cx(
-        'absolute h-[2px] bg-gray-600 transition-all',
+        'absolute h-[2px] bg-white transition-all',
         isOpen ? 'left-1/2 top-[10px] w-0' : 'left-0 top-0 w-3/5'
       )}
     />
     <div
       className={cx(
-        'absolute top-[10px] h-[2px] w-full bg-gray-600 transition-all',
+        'absolute top-[10px] h-[2px] w-full bg-white transition-all',
         isOpen ? 'rotate-45 transform' : 'rotate-0 transform'
       )}
     />
     <div
       className={cx(
-        'absolute top-[10px] h-[2px] w-full bg-gray-600 transition-all',
+        'absolute top-[10px] h-[2px] w-full bg-white transition-all',
         isOpen ? '-rotate-45 transform' : 'rotate-0 transform'
       )}
     />
     <div
       className={cx(
-        'absolute left-1/2 h-[2px] bg-gray-600 transition-all',
+        'absolute left-1/2 h-[2px] bg-white transition-all',
         isOpen ? 'top-[10px] w-0' : 'top-[20px] w-3/5'
       )}
     />

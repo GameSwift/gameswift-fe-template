@@ -1,7 +1,6 @@
 import { Config } from 'tailwindcss'
 
 const config = {
-  darkMode: ['class'],
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -10,117 +9,93 @@ const config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px'
-      }
+    fontWeight: {
+      // only use 300 and 500 for Poppins(secondary) and 500 for Apex Mk3(main) (see src/styles/fonts.ts)
+      normal: '300',
+      bold: '500'
+    },
+    fontSize: {
+      xs: '0.75rem', // 12px
+      sm: '0.875rem', // 14px
+      base: '1rem', // 16px
+      lg: '1.125rem', // 18px
+      xl: '1.25rem', // 20px
+      '2xl': '1.5rem', // 24px
+      '3xl': '2.25rem', // 36px
+      '4xl': '3rem', // 48px
+      '5xl': '5rem' // 80px
     },
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#fdc244',
-          50: '#fffdf5',
-          100: '#fffced',
-          200: '#fff6d1',
-          300: '#ffefb5',
-          400: '#fcda7c',
-          500: '#fdc244',
-          600: '#e3a736',
-          700: '#bd8026',
-          800: '#965e18',
-          900: '#73400e',
-          950: '#4a2306'
-        },
-        secondary: {
-          DEFAULT: '#447ffd',
-          50: '#f5fbff',
-          100: '#edf8ff',
-          200: '#d1ebff',
-          300: '#b5dbff',
-          400: '#7cb1fc',
-          500: '#447ffd',
-          600: '#366ae3',
-          700: '#2651bd',
-          800: '#183896',
-          900: '#0e2573',
-          950: '#06144a'
+          DEFAULT: '#FDC244',
+          50: '#FFFDF5',
+          100: '#FFFCED',
+          200: '#FFF6D1',
+          300: '#FFEFB5',
+          400: '#FCDA7C',
+          500: '#FDC244',
+          600: '#E3A736',
+          700: '#BD8026',
+          800: '#F9FAFB',
+          900: '#F9FAFB'
         },
         background: {
-          DEFAULT: '#ebf6fc',
-          50: '#ffffff',
-          100: '#fcfeff',
-          200: '#fafeff',
-          300: '#f7fdff',
-          400: '#f0f9fc',
-          500: '#ebf6fc',
-          600: '#bfd5e3',
-          700: '#84a4bd',
-          800: '#547696',
-          900: '#304f73',
-          950: '#142a4a'
+          DEFAULT: '#1F2128',
+          50: '#F2F4F5',
+          100: '#E6E9EB',
+          200: '#BDC4C9',
+          300: '#99A0A8',
+          400: '#585D69',
+          500: '#1F2128',
+          600: '#191B24',
+          700: '#12141F',
+          800: '#0C0E1A',
+          900: '#304f73'
         },
         success: {
           DEFAULT: '#25fa61',
-          50: '#f5fffb',
-          100: '#ebfff7',
-          200: '#c9ffe7',
-          300: '#a7fcd2',
-          400: '#68fca1',
-          500: '#25fa61',
-          600: '#1fe053',
-          700: '#14ba3e',
-          800: '#0e962d',
-          900: '#08701d',
-          950: '#03470f'
+          50: '#F5FCF9',
+          100: '#EDFCF6',
+          200: '#D2F7E5',
+          300: '#BAF5D4',
+          400: '#8AEBAA',
+          500: '#5EE37B',
+          600: '#4BCC65',
+          700: '#35AB4B',
+          800: '#228733',
+          900: '#12661F'
         },
         error: {
-          DEFAULT: '#e0221b',
-          50: '#fcf7f2',
-          100: '#fcf0e6',
-          200: '#f7d7c1',
-          300: '#f2b89d',
-          400: '#eb7459',
-          500: '#e0221b',
-          600: '#c91c16',
-          700: '#a8140f',
-          800: '#870e09',
-          900: '#660705',
-          950: '#420302'
+          DEFAULT: '#F94C41',
+          50: '#FFFAF5',
+          100: '#FFF6ED',
+          200: '#FFE4D1',
+          300: '#FCCBB1',
+          400: '#FC9379',
+          500: '#F94C41',
+          600: '#E03F34',
+          700: '#BA2D23',
+          800: '#961E18',
+          900: '#70120D'
         },
-        warning: {
-          DEFAULT: '#ffcc00',
-          50: '#fffef2',
-          100: '#fffce6',
-          200: '#fff8bf',
-          300: '#fff199',
-          400: '#ffe14d',
-          500: '#ffcc00',
-          600: '#e6b000',
-          700: '#bf8600',
-          800: '#996100',
-          900: '#734300',
-          950: '#4a2600'
+        gray: {
+          DEFAULT: '#8F9093',
+          50: '#FAFAFA',
+          100: '#F5F5F5',
+          200: '#E3E4E6',
+          300: '#D2D3D4',
+          400: '#B1B3B5',
+          500: '#8F9093',
+          600: '#737785',
+          700: '#50566E',
+          800: '#343B59',
+          900: '#1D2442'
         }
       },
       fontFamily: {
         main: 'var(--font-main)',
         secondary: 'var(--font-secondary)'
-      },
-      keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' }
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' }
-        }
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out'
       }
     }
   },

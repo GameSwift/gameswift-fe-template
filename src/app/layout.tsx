@@ -1,12 +1,17 @@
 import clsx from 'clsx'
+import { Metadata } from 'next'
+import { FaviconURL, OGImageUrl } from '@/config'
 import { Layout } from '@/layout'
 import { MainFont, SecondaryFont } from '@/styles'
 import '@/styles/globals.css'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Next.js 13 Template',
   description:
-    'A starter for Next.js using app router with TypeScript and Tailwind CSS.'
+    'A starter for Next.js using app router with TypeScript and Tailwind CSS.',
+  openGraph: {
+    images: OGImageUrl
+  }
 }
 
 const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => (
@@ -17,12 +22,16 @@ const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => (
         as="image/svg+xml"
         href="sprite.svg"
       />
+      <link
+        rel="shortcut icon"
+        href={FaviconURL}
+      />
     </head>
     <body
       className={clsx(
         MainFont.variable,
         SecondaryFont.variable,
-        'relative flex min-h-[100dvh] flex-col items-center overflow-x-hidden bg-background font-secondary'
+        'relative flex min-h-[100dvh] flex-col items-center overflow-x-hidden bg-background font-secondary font-normal text-white'
       )}
     >
       <Layout>{children}</Layout>

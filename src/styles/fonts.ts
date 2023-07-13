@@ -1,17 +1,22 @@
-import { Montserrat, Barlow } from 'next/font/google'
+import { Poppins } from 'next/font/google'
+import localFont from 'next/font/local'
 
-export const MainFont = Barlow({
-  subsets: ['latin'],
-  weight: ['500', '700', '800'],
+export const MainFont = localFont({
+  src: [
+    {
+      path: '../../public/fonts/Apex-Mk3-Medium.otf',
+      weight: '500'
+    }
+  ],
   fallback: ['sans-serif'],
-  variable: '--font-main',
-  display: 'swap'
+  display: 'swap',
+  variable: '--font-main'
 })
 
-export const SecondaryFont = Montserrat({
+export const SecondaryFont = Poppins({
   subsets: ['latin'],
-  weight: ['400'],
+  weight: ['300', '500'],
   fallback: ['sans-serif'],
-  variable: '--font-secondary',
-  display: 'swap'
+  display: 'swap',
+  variable: '--font-secondary'
 })
