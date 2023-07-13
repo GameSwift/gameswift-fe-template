@@ -1,6 +1,6 @@
-export * as dateUtils from './date'
+export * from './date'
 export * as regexes from './regexes'
-export * as env from './env'
+export * from './env'
 export * from './icons'
 export * from './styles'
 export * from './url'

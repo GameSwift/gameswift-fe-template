@@ -9,10 +9,6 @@ const NAV_LINKS = [
   {
     href: InternalLink.home,
     text: 'Home'
-  },
-  {
-    href: '/about',
-    text: 'About'
   }
 ]
 
