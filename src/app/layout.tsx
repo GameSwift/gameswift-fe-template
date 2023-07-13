@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 import { Metadata } from 'next'
+import { Providers } from '@/components'
 import { FaviconURL, OGImageUrl } from '@/config'
 import { Layout } from '@/layout'
 import { MainFont, SecondaryFont } from '@/styles'
@@ -34,7 +35,9 @@ const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => (
         'relative flex min-h-[100dvh] flex-col items-center overflow-x-hidden bg-background font-secondary font-normal text-white'
       )}
     >
-      <Layout>{children}</Layout>
+      <Providers>
+        <Layout>{children}</Layout>
+      </Providers>
     </body>
   </html>
 )
