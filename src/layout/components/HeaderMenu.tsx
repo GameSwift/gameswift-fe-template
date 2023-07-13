@@ -4,7 +4,6 @@ import { cx } from 'class-variance-authority'
 import { useToggle } from '@/hooks'
 import { Hamburger } from './Hamburger'
 import { NavLinks } from './NavLinks'
-import { SocialIcons } from './SocialIcons'
 
 export const HeaderMenu = () => {
   const [isOpen, toggleIsOpen] = useToggle()
@@ -22,7 +21,6 @@ export const HeaderMenu = () => {
         )}
       >
         <NavLinks onNavLinkClick={onToggle} />
-        <SocialIcons iconClassName="hover:text-secondary-400" />
       </div>
       <Hamburger
         isOpen={isOpen}

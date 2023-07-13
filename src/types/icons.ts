@@ -1,3 +1,3 @@
-import { IconId } from '@/utils'
+import { iconId } from '@/utils'
 
-export type IconId = (typeof IconId)[keyof typeof IconId]
+export type IconId = (typeof iconId)[keyof typeof iconId]

@@ -1,9 +1,7 @@
-import { IconId as IconIdType } from '@/types'
+import { IconId } from '@/types'
 
-export const IconId = {
-  linkedin: 'linkedin',
-  github: 'github',
-  twitter: 'twitter'
+export const iconId = {
+  linkedin: 'linkedin'
 } as const
 
-export const getIconHref = (id: IconIdType) => `/icons/sprite.svg#${id}`
+export const getIconHref = (id: IconId) => `/icons/sprite.svg#${id}`
