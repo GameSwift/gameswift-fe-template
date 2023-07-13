@@ -1,5 +1,10 @@
 import { Button, Link } from '@/components'
 import { InternalLink } from '@/config'
+import { getMetadata } from '@/utils'
+
+export const metadata = getMetadata({
+  title: 'Not Found'
+})
 
 const Custom404Page = () => (
   <div className="layout-section flex-1 items-center justify-center gap-6 text-center">

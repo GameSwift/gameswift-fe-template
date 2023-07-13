@@ -4,3 +4,5 @@ export const InternalLink: Record<string, LinkProps['href']> = {
   home: '/'
 }
 export const ExternalLink = {}
+
+export const AppName = 'GameSwift'

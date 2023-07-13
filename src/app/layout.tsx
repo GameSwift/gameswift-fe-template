@@ -1,19 +1,17 @@
 import clsx from 'clsx'
-import { Metadata } from 'next'
 import { Providers } from '@/components'
 import { FaviconURL, OGImageUrl } from '@/config'
 import { Layout } from '@/layout'
 import { MainFont, SecondaryFont } from '@/styles'
 import '@/styles/globals.css'
+import { getMetadata } from '@/utils'
 
-export const metadata: Metadata = {
-  title: 'Next.js 13 Template',
-  description:
-    'A starter for Next.js using app router with TypeScript and Tailwind CSS.',
+export const metadata = getMetadata({
+  title: 'Home',
   openGraph: {
     images: OGImageUrl
   }
-}
+})
 
 const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => (
   <html lang="en">
