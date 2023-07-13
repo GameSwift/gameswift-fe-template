@@ -1,7 +1,9 @@
+import { FooterBottomRow } from './FooterBottomRow'
+import { FooterMainRow } from './FooterMainRow'
+
 export const Footer = () => (
   <footer className="layout-container">
-    <div className="layout-section">
-      <h2 className="text-2xl font-bold">Footer</h2>
-    </div>
+    <FooterMainRow />
+    <FooterBottomRow />
   </footer>
 )
