@@ -28,7 +28,7 @@ export const TestForm = () => {
             e.preventDefault()
             submit()
           }}
-          className="flex w-full max-w-xs flex-col gap-4"
+          className="flex w-full max-w-xs flex-col gap-4 max-md:max-w-none"
         >
           <Field<TestFormSchema['name']>
             name="name"

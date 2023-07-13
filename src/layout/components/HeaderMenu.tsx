@@ -16,7 +16,7 @@ export const HeaderMenu = () => {
     <div className="flex flex-1 items-center justify-end gap-6">
       <div
         className={cx(
-          'flex flex-1 items-center justify-end gap-6 max-md:fixed max-md:left-0 max-md:top-0 max-md:z-[1000] max-md:h-screen max-md:w-full max-md:flex-col max-md:justify-center max-md:overflow-hidden max-md:bg-background max-md:transition-all max-md:duration-300 max-md:ease-in-out',
+          'flex flex-1 items-center justify-end gap-6 max-md:fixed max-md:left-0 max-md:top-0 max-md:z-[1000] max-md:h-screen max-md:w-full max-md:flex-col max-md:justify-center max-md:overflow-hidden max-md:bg-background max-md:bg-gradient-to-l max-md:from-background max-md:to-[#13151a] max-md:transition-all max-md:duration-300 max-md:ease-in-out',
           isOpen ? 'max-md:translate-x-0' : 'max-md:translate-x-full'
         )}
       >
