@@ -7,17 +7,19 @@ export const SocialIcons = () => (
       href={ExternalLink.twitter}
       iconId="twitter"
       label="twitter"
+      className="h-[12px] w-[14px]"
     />
     <SocialIcon
       href={ExternalLink.discord}
       iconId="discord"
       label="discord"
+      className="h-[11px] w-[15px]"
     />
     <SocialIcon
       href={ExternalLink.telegram}
       iconId="telegram"
       label="telegram"
-      className="translate-x-[1px] translate-y-[3px] scale-125"
+      className="h-[11px] w-[13px]"
     />
   </div>
 )
