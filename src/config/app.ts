@@ -10,8 +10,7 @@ export const ExternalLink = {
   landingPage: 'https://gameswift.io',
   apply: 'https://gameswift.io/contact-us/apply',
   careers: 'https://gameswift.io/careers',
-  // TODO update whitepaper link
-  whitepaper: '',
+  litepaper: 'https://litepaper.gameswift.io/',
   privacyPolicy:
     'https://cdn.gameswift.io/gameswift/documents/gameswift-platform/GameSwift%20-%20Privacy%20Policy.pdf',
   termsOfUse:

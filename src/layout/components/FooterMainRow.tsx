@@ -21,8 +21,8 @@ const FOOTER_LINKS = [
   ],
   [
     {
-      label: 'Whitepaper',
-      to: ExternalLink.whitepaper
+      label: 'Litepaper',
+      to: ExternalLink.litepaper
     },
     {
       label: 'Privacy policy',
