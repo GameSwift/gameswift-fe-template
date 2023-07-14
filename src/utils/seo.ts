@@ -1,9 +1,12 @@
 import { type Metadata } from 'next'
-import { AppName } from '@/config'
+import { AppName, DefaultSEOTags } from '@/config'
 
-export const getMetadata = ({ title, ...metadata }: Metadata): Metadata => ({
-  title: title ? `${title} | ${AppName}` : AppName,
-  description:
-    'A starter for Next.js using app router with TypeScript and Tailwind CSS.',
-  ...metadata
-})
+export const getMetadata = ({ title, ...metadata }: Metadata): Metadata => {
+  const metaTitle = title ? `${title} | ${AppName}` : AppName
+
+  return {
+    ...DefaultSEOTags,
+    ...metadata,
+    title: metaTitle
+  }
+}

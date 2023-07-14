@@ -1,15 +1,22 @@
 import clsx from 'clsx'
 import { Providers } from '@/components'
-import { FaviconURL, OGImageUrl } from '@/config'
+import { AppName, FaviconURL, OGImageUrl } from '@/config'
 import { Layout } from '@/layout'
 import { MainFont, SecondaryFont } from '@/styles'
 import '@/styles/globals.css'
 import { getMetadata } from '@/utils'
 
 export const metadata = getMetadata({
-  title: 'Home',
   openGraph: {
-    images: OGImageUrl
+    images: [
+      {
+        url: OGImageUrl,
+        width: 1200,
+        height: 630,
+        alt: `${AppName} OG Image`,
+        type: 'image/png'
+      }
+    ]
   }
 })
 
