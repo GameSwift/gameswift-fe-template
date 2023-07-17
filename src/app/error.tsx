@@ -33,17 +33,17 @@ const Error: React.FC<ErrorProps> = ({ error, reset }) => (
         <br />
         Please try again in a few minutes.
       </p>
-      <div className="flex flex-1 gap-6">
+      <div className="flex flex-1 flex-wrap gap-6">
         <Button
           onClick={reset}
           variant="outline"
-          className="flex-1"
+          className="flex-1 whitespace-nowrap max-md:min-w-[150px]"
         >
           Reset
         </Button>
         <Button
           asChild
-          className="flex-1"
+          className="flex-1 whitespace-nowrap max-md:min-w-[150px]"
         >
           <Link href={InternalLink.home}>back to home</Link>
         </Button>

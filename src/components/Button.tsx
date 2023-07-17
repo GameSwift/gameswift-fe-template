@@ -45,7 +45,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = 'Button'
 
 export const buttonVariants = cva(
-  'inline-flex items-center py-2 justify-center gap-1 text-sm uppercase font-main ring-offset-white/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white disabled:cursor-not-allowed',
+  'inline-flex items-center py-3 text-base leading-4 justify-center gap-1 uppercase font-main ring-offset-white/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white disabled:cursor-not-allowed',
   {
     variants: {
       variant: {
@@ -59,7 +59,7 @@ export const buttonVariants = cva(
         link: 'text-primary underline-offset-4 hover:underline disabled:text-primary-400'
       },
       size: {
-        default: 'px-4',
+        default: 'px-6',
         sm: 'px-3',
         lg: 'px-8',
         icon: 'w-10 h-10 rounded-full'

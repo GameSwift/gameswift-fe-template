@@ -36,7 +36,7 @@ const FOOTER_LINKS = [
 ]
 
 export const FooterMainRow = () => (
-  <div className="layout-section border-t border-t-gray/50 py-10">
+  <div className="layout-section border-t border-t-white/10 py-10">
     <div className="flex gap-6 py-5 max-md:flex-col max-md:items-stretch max-md:py-4">
       <div className="flex flex-1 flex-col gap-4 max-md:flex-row max-md:flex-wrap max-md:justify-between">
         <Link href={InternalLink.home}>

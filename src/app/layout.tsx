@@ -37,7 +37,7 @@ const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => (
       className={clsx(
         MainFont.variable,
         SecondaryFont.variable,
-        'relative flex min-h-[100dvh] flex-col items-center overflow-x-hidden bg-gradient-to-l from-background to-[#13151a] font-secondary font-normal text-white'
+        'flex min-h-[100dvh] flex-col items-center overflow-x-hidden bg-gradient-to-l from-background to-[#13151a] font-secondary font-normal text-white'
       )}
     >
       <Providers>

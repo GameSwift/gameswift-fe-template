@@ -11,17 +11,20 @@ type NavLinkProps = {
 
 export const NavLink: React.FC<NavLinkProps> = ({ href, text, onClick }) => {
   const pathname = usePathname()
+  const isDisabled = !Boolean(href)
 
   return (
     <li>
       <Link
-        onClick={onClick}
+        onClick={isDisabled ? undefined : onClick}
         href={href}
       >
         <p
           className={clsx(
-            'font-secondary text-lg text-gray transition-colors duration-150 hover:text-white max-md:text-base',
-            pathname === href && 'text-white'
+            'relative font-secondary transition-colors duration-150 max-md:text-base',
+            isDisabled && 'cursor-not-allowed text-gray',
+            pathname === href &&
+              'font-bold before:absolute before:inset-y-0 before:-left-2 before:w-0.5 before:bg-primary'
           )}
         >
           {text}

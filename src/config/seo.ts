@@ -22,5 +22,6 @@ export const DefaultSEOTags: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: GameSwiftTwitterHandle
-  }
+  },
+  themeColor: '#1F2128'
 }
