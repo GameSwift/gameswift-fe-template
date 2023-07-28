@@ -1,30 +1,27 @@
 'use client'
 
-import { cx } from 'class-variance-authority'
 import { useToggle } from '@/hooks'
+import { cn } from '@/utils'
 import { Hamburger } from './Hamburger'
 import { NavLinks } from './NavLinks'
 
 export const HeaderMenu = () => {
   const [isOpen, toggleIsOpen] = useToggle()
-  const onToggle = () => {
-    toggleIsOpen()
-    document.body.style.overflowY = isOpen ? 'visible' : 'hidden'
-  }
 
   return (
     <div className="flex flex-1 items-center justify-end gap-6">
       <div
-        className={cx(
-          'flex flex-1 items-center justify-end gap-10 max-lg:gap-6 max-md:fixed max-md:inset-0 max-md:z-[1000] max-md:h-screen max-md:flex-col max-md:justify-center max-md:overflow-hidden max-md:bg-background max-md:bg-gradient-to-l max-md:from-background max-md:to-[#13151a] max-md:transition-all max-md:duration-300 max-md:ease-in-out',
+        className={cn(
+          'flex flex-1 items-center justify-end gap-10 max-lg:gap-6',
+          'max-md:fixed max-md:inset-0 max-md:z-[1000] max-md:h-screen max-md:flex-col max-md:items-stretch max-md:justify-start max-md:overflow-hidden max-md:bg-background max-md:bg-gradient-to-l max-md:from-background max-md:to-[#13151a] max-md:p-4 max-md:pt-16 max-md:transition-all max-md:duration-300 max-md:ease-in-out',
           isOpen ? 'max-md:translate-x-0' : 'max-md:translate-x-full'
         )}
       >
-        <NavLinks onNavLinkClick={onToggle} />
+        <NavLinks onNavLinkClick={toggleIsOpen} />
       </div>
       <Hamburger
         isOpen={isOpen}
-        onToggle={onToggle}
+        onToggle={toggleIsOpen}
       />
     </div>
   )

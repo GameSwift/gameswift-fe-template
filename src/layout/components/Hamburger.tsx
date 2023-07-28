@@ -13,7 +13,7 @@ export const Hamburger: React.FC<HamburgerProps> = ({ isOpen, onToggle }) => (
     <div
       className={cx(
         'absolute h-[2px] bg-white transition-all',
-        isOpen ? 'left-1/2 top-[10px] w-0' : 'left-0 top-0 w-3/5'
+        isOpen ? 'left-1/2 top-[10px] w-0' : 'left-0 top-0 w-1/2'
       )}
     />
     <div
@@ -31,7 +31,7 @@ export const Hamburger: React.FC<HamburgerProps> = ({ isOpen, onToggle }) => (
     <div
       className={cx(
         'absolute left-1/2 h-[2px] bg-white transition-all',
-        isOpen ? 'top-[10px] w-0' : 'top-[20px] w-3/5'
+        isOpen ? 'top-[10px] w-0' : 'top-[20px] w-1/2'
       )}
     />
   </button>

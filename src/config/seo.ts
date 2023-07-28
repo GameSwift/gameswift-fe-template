@@ -17,11 +17,21 @@ export const DefaultSEOTags: Metadata = {
     type: 'website',
     locale: 'en_IE',
     url: env.client.NEXT_PUBLIC_APP_BASE_URL,
-    siteName: AppName
+    siteName: AppName,
+    images: [
+      {
+        url: OGImageUrl,
+        width: 1200,
+        height: 630,
+        alt: AppName,
+        type: 'image/png'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     site: GameSwiftTwitterHandle
   },
-  themeColor: '#1F2128'
+  themeColor: '#1F2128',
+  icons: FaviconURL
 }

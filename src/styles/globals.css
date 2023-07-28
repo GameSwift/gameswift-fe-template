@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 .layout-container {
-  @apply flex flex-col max-w-full w-screen;
+  @apply flex w-screen max-w-full flex-col;
 }
 .layout-section {
-  @apply flex flex-col self-center max-w-[1520px] w-full px-10 py-5 max-md:p-4;
+  @apply mx-auto flex w-full max-w-[1520px] flex-col self-center px-10 py-5 max-md:p-4;
+}
+.font-main {
+  @apply tracking-wider;
+  font-family: var(--font-main);
 }

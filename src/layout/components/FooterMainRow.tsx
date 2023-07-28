@@ -1,7 +1,7 @@
 import { Image, Link, SocialIcons } from '@/components'
 import { InternalLink, ExternalLink } from '@/config'
-import Ships from '@/public/images/footer-ships.webp'
-import Logo from '@/public/images/logo-full.webp'
+import Ships from '@/public/images/shared/footer-ships.webp'
+import Logo from '@/public/images/shared/logo-full.webp'
 import { FooterLinksColumn } from './FooterLinksColumn'
 
 const FOOTER_LINKS = [

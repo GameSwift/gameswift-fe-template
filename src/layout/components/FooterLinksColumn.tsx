@@ -14,7 +14,7 @@ export const FooterLinksColumn: React.FC<FooterLinksColumnProps> = ({
   links
 }) => (
   <div className="flex flex-1 flex-col gap-4">
-    <Separator className="w-4" />
+    <Separator className="w-4 bg-white/10" />
     <div className="flex flex-col gap-4 max-md:flex-row max-md:flex-wrap">
       {links.map(({ to, label }) => (
         <Link

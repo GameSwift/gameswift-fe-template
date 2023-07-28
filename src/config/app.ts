@@ -2,7 +2,7 @@ import { LinkProps } from 'next/link'
 
 export const InternalLink: Record<string, LinkProps['href']> = {
   home: '/'
-}
+} as const
 export const ExternalLink = {
   twitter: 'https://twitter.com/GameSwift_io',
   telegram: 'https://t.me/gameswift_io',
@@ -15,6 +15,6 @@ export const ExternalLink = {
     'https://cdn.gameswift.io/gameswift/documents/gameswift-platform/GameSwift%20-%20Privacy%20Policy.pdf',
   termsOfUse:
     'cdn.gameswift.io/gameswift/documents/gameswift-platform/GameSwift%20Platform%20-%20Terms%20of%20Use.pdf'
-}
+} as const
 
 export const AppName = 'GameSwift'

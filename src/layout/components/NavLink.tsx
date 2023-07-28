@@ -21,10 +21,11 @@ export const NavLink: React.FC<NavLinkProps> = ({ href, text, onClick }) => {
       >
         <p
           className={clsx(
-            'relative font-secondary transition-colors duration-150 max-md:text-base',
-            isDisabled && 'cursor-not-allowed text-gray',
-            pathname === href &&
-              'font-bold before:absolute before:inset-y-0 before:-left-2 before:w-0.5 before:bg-primary'
+            'relative font-secondary text-sm transition-colors duration-150 before:absolute before:inset-x-0 before:-bottom-[27px] before:h-[1px] before:scale-x-0 before:bg-primary max-md:border-b max-md:border-white/10 max-md:py-6 max-md:text-xl max-md:before:hidden',
+            isDisabled && 'cursor-not-allowed',
+            pathname === href
+              ? 'font-bold before:scale-x-100'
+              : 'font-normal text-gray before:origin-left before:transition-transform before:duration-300 before:ease-in-out hover:text-current hover:before:scale-x-100'
           )}
         >
           {text}

@@ -3,6 +3,22 @@ import './src/utils/env/server.mjs'
 
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {}
+const nextConfig = {
+  output: 'standalone',
+  async headers() {
+    return [
+      {
+        source: '/icons/:path*.svg',
+        locale: false,
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=9999999999, must-revalidate'
+          }
+        ]
+      }
+    ]
+  }
+}
 
 export default nextConfig

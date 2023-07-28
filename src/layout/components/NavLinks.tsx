@@ -13,7 +13,7 @@ const NAV_LINKS = [
 ]
 
 export const NavLinks: React.FC<NavLinksProps> = ({ onNavLinkClick }) => (
-  <ul className="flex items-center gap-8 max-lg:gap-5 max-md:flex-col">
+  <ul className="flex items-center gap-8 max-lg:gap-5 max-md:flex-col max-md:items-stretch max-md:gap-0">
     {NAV_LINKS.map(({ href, text }) => (
       <NavLink
         key={text}

@@ -18,7 +18,7 @@ export const SocialIcon: React.FC<WithClassName<SocialIconProps>> = ({
   <Link
     href={href}
     aria-label={label}
-    className="flex h-8 w-8 items-center justify-center border border-white/10 transition-colors hover:border-white/50"
+    className="flex h-8 w-8 items-center justify-center border border-white/10 transition-colors hover:border-white/20"
   >
     <Icon
       id={iconId}
