@@ -10,7 +10,7 @@ type ErrorProps = {
 
 const Error: React.FC<ErrorProps> = ({ error, reset }) => (
   <div className="layout-section flex-1 items-center justify-center gap-6">
-    <div className="flex w-full max-w-xl flex-col gap-6 border border-white/10 bg-background-400/20 p-8 backdrop-blur-lg max-md:items-center max-md:border-none max-md:bg-transparent max-md:p-0 max-md:backdrop-blur-none">
+    <div className="flex w-full max-w-xl flex-col gap-6 border border-white/10 bg-background-secondary p-8 backdrop-blur-lg max-md:items-center max-md:border-none max-md:bg-transparent max-md:p-0 max-md:backdrop-blur-none">
       <div className="-mb-4 flex items-center justify-between gap-4 max-md:flex-col-reverse">
         <h2 className="font-main text-2xl max-md:text-xl">
           Opss... Something went wrong

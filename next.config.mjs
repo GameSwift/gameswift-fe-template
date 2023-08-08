@@ -18,6 +18,20 @@ const nextConfig = {
         ]
       }
     ]
+  },
+  async headers() {
+    return [
+      {
+        source: '/icons/:path*.svg',
+        locale: false,
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-cache'
+          }
+        ]
+      }
+    ]
   }
 }
 
