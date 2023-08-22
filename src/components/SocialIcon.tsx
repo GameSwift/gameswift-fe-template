@@ -22,7 +22,7 @@ export const SocialIcon: React.FC<WithClassName<SocialIconProps>> = ({
   >
     <Icon
       id={iconId}
-      className={cn('h-4 w-4', className)}
+      className={cn('h-4 w-4 fill-current', className)}
     />
   </Link>
 )
