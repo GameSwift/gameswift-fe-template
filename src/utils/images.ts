@@ -1,8 +1,8 @@
-import type { ImageProps } from 'next/image'
+import { ImageSrc } from '@/types'
 import nextConfig from '../../next.config.mjs'
 import { withHttpsProtocol } from './url'
 
-export const shouldOptimizeImage = (imageSrc: ImageProps['src']) =>
+export const shouldOptimizeImage = (imageSrc: ImageSrc) =>
   Boolean(
     typeof imageSrc === 'string' &&
       nextConfig?.images?.remotePatterns?.some(({ hostname }) =>

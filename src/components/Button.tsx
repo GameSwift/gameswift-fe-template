@@ -19,10 +19,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       size,
       asChild = false,
       type = 'button',
-      disabled,
-      onClick,
       children,
-      id
+      ...props
     },
     ref
   ) => {
@@ -33,9 +31,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         type={type}
-        disabled={disabled}
-        onClick={onClick}
-        id={id}
+        {...props}
       >
         {children}
       </Comp>
@@ -45,24 +41,20 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = 'Button'
 
 export const buttonVariants = cva(
-  'inline-flex items-center py-3 text-base leading-4 justify-center gap-1 uppercase font-main ring-offset-white/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white disabled:cursor-not-allowed',
+  'inline-flex items-center py-4 text-base leading-4 justify-center gap-1 uppercase font-main ring-offset-white/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white disabled:cursor-not-allowed rounded-none',
   {
     variants: {
       variant: {
         default:
-          'bg-primary text-black hover:bg-primary-600 disabled:bg-primary-400',
-        destructive:
-          'bg-error text-white hover:bg-error-600 disabled:bg-error-400',
+          'bg-primary text-black hover:bg-primary-600 disabled:bg-disabled min-w-[210px] max-md:w-full max-md:min-w-0',
         outline:
-          'border border-primary hover:border-primary-600 hover:text-primary-600 text-primary disabled:border-primary-400 disabled:text-primary-400',
+          'border border-primary hover:border-primary-600 hover:text-primary-600 text-primary disabled:border-disabled disabled:text-disabled min-w-[210px] max-md:w-full max-md:min-w-0',
         ghost: 'text-white hover:bg-gray/10 disabled:text-gray',
-        link: 'text-primary underline-offset-4 hover:underline disabled:text-primary-400'
+        link: 'underline underline-offset-2'
       },
       size: {
         default: 'px-6',
-        sm: 'px-3',
-        lg: 'px-8',
-        icon: 'w-10 h-10 rounded-full'
+        icon: 'p-2 w-10 h-10 shrink-0 rounded-full min-w-0 max-md:w-10'
       }
     },
     defaultVariants: {

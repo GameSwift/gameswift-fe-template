@@ -1,9 +1,9 @@
-import { LinkProps } from 'next/link'
 import { Link, Separator } from '@/components'
+import { LinkHref } from '@/types'
 
 type Link = {
   label: string
-  to: LinkProps['href']
+  to: LinkHref
 }
 
 type FooterLinksColumnProps = {

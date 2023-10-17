@@ -1,6 +1,6 @@
-import { LinkProps } from 'next/link'
+import { LinkHref } from '@/types'
 
-export const InternalLink: Record<string, LinkProps['href']> = {
+export const InternalLink: Record<string, LinkHref> = {
   home: '/'
 } as const
 export const ExternalLink = {
