@@ -1,7 +1,7 @@
 'use client'
 
 import { Button, Link, StatusMessage, Icon } from '@/components'
-import { InternalLink } from '@/config'
+import { InternalLink } from '@/config/app'
 
 type ErrorProps = {
   reset: VoidFunction
@@ -17,8 +17,8 @@ const Error: React.FC<ErrorProps> = ({ error, reset }) => (
         </h2>
         <Button
           asChild
-          size="icon"
-          className="bg-white/10 p-0 text-xl text-white hover:bg-white/10"
+          variant="icon-rounded"
+          className="hover:bg-white/5"
         >
           <div>
             <Icon

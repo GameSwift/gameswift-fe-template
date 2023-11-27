@@ -1,6 +1,6 @@
-import NextLink, { LinkProps as InternalLinkProps } from 'next/link'
-import { WithClassName } from '@/types'
-import { regexes } from '@/utils'
+import NextLink, { type LinkProps as InternalLinkProps } from 'next/link'
+import { type WithClassName } from '@/types/common'
+import { isExternalLink } from '@/utils/regexes'
 
 type LinkProps = {
   disabled?: boolean
@@ -33,7 +33,7 @@ export const Link: React.FC<
       </span>
     )
   }
-  if (typeof href === 'string' && regexes.isExternalLink(href)) {
+  if (typeof href === 'string' && isExternalLink(href)) {
     return (
       <a
         href={href}

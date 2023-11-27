@@ -1,4 +1,4 @@
-import { InternalLink } from '@/config'
+import { InternalLink } from '@/config/app'
 import { NavLink } from './NavLink'
 
 type NavLinksProps = {

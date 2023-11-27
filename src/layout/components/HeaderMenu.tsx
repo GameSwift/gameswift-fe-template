@@ -1,12 +1,20 @@
 'use client'
 
-import { useToggle } from '@/hooks'
-import { cn } from '@/utils'
+import { useDisclosure } from '@mantine/hooks'
+import { cn } from '@/utils/styles'
 import { Hamburger } from './Hamburger'
 import { NavLinks } from './NavLinks'
 
 export const HeaderMenu = () => {
-  const [isOpen, toggleIsOpen] = useToggle()
+  const [isOpen, handlers] = useDisclosure(false)
+  const onToggle = () => {
+    handlers.toggle()
+    document.body.style.overflowY = isOpen ? 'visible' : 'hidden'
+  }
+  const onClose = () => {
+    handlers.close()
+    document.body.style.overflowY = 'visible'
+  }
 
   return (
     <div className="flex flex-1 items-center justify-end gap-6">
@@ -17,11 +25,11 @@ export const HeaderMenu = () => {
           isOpen ? 'max-md:translate-x-0' : 'max-md:translate-x-full'
         )}
       >
-        <NavLinks onNavLinkClick={toggleIsOpen} />
+        <NavLinks onNavLinkClick={onClose} />
       </div>
       <Hamburger
         isOpen={isOpen}
-        onToggle={toggleIsOpen}
+        onToggle={onToggle}
       />
     </div>
   )

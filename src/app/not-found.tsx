@@ -1,6 +1,6 @@
 import { Button, Icon, Link } from '@/components'
-import { InternalLink } from '@/config'
-import { getMetadata } from '@/utils'
+import { InternalLink } from '@/config/app'
+import { getMetadata } from '@/utils/seo'
 
 export const metadata = getMetadata({
   title: 'Not Found'
@@ -15,8 +15,8 @@ const Custom404Page = () => (
         </h2>
         <Button
           asChild
-          size="icon"
-          className="bg-white/10 p-0 text-xl text-white hover:bg-white/10"
+          variant="icon-rounded"
+          className="hover:bg-white/5"
         >
           <div>
             <Icon

@@ -1,5 +1,5 @@
-import { WithClassName } from '@/types'
-import { cn } from '@/utils'
+import { type WithClassName } from '@/types/common'
+import { cn } from '@/utils/styles'
 
 export const LoaderCircle: React.FC<WithClassName> = ({ className }) => (
   <div

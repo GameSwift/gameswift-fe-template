@@ -1,4 +1,4 @@
-import { ExternalLink } from '@/config'
+import { ExternalLink } from '@/config/app'
 import { SocialIcon } from './SocialIcon'
 
 export const SocialIcons = () => (

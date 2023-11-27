@@ -1,5 +1,5 @@
 import { Slot } from '@radix-ui/react-slot'
-import { cn } from '@/utils'
+import { cn } from '@/utils/styles'
 
 type IconWrapperProps = {
   className?: string

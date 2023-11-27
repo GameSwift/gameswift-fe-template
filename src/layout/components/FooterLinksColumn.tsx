@@ -1,5 +1,5 @@
 import { Link, Separator } from '@/components'
-import { LinkHref } from '@/types'
+import { type LinkHref } from '@/types/url'
 
 type Link = {
   label: string

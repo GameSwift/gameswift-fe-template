@@ -1,6 +1,10 @@
-import axios, { AxiosRequestConfig, AxiosResponse, AxiosInstance } from 'axios'
+import axios, {
+  type AxiosRequestConfig,
+  type AxiosResponse,
+  type AxiosInstance
+} from 'axios'
 import { z } from 'zod'
-import { AXIOS_TIMEOUT } from '@/config'
+import { AXIOS_TIMEOUT } from '@/config/api'
 
 const AXIOS_CONFIG_DEFAULTS = {
   timeout: AXIOS_TIMEOUT,

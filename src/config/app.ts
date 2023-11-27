@@ -1,6 +1,4 @@
-import { LinkHref } from '@/types'
-
-export const InternalLink: Record<string, LinkHref> = {
+export const InternalLink = {
   home: '/'
 } as const
 export const ExternalLink = {

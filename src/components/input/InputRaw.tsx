@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { cn } from '@/utils'
-import { InputRawProps } from './types'
+import { cn } from '@/utils/styles'
+import { type InputRawProps } from './types'
 
 const InputRaw = React.forwardRef<HTMLInputElement, InputRawProps>(
   (

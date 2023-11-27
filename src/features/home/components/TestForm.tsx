@@ -3,22 +3,20 @@
 import { useMutation } from '@tanstack/react-query'
 import { Field, Form } from 'houseform'
 import { Button, Input, LoaderCircle, StatusMessage } from '@/components'
-import { QueryKey } from '@/lib/reactQuery'
-import { getErrorMessage } from '@/utils'
+import { MutationKey } from '@/lib/reactQuery'
+import { getErrorMessage } from '@/utils/error'
 import { sendMockedTest } from '../actions'
-import { TestFormSchema, testFormNameSchema } from '../validationSchemas'
+import { type TestFormSchema, testFormNameSchema } from '../validationSchemas'
 
 export const TestForm = () => {
-  const { isLoading, mutate, error } = useMutation(
-    [QueryKey.test],
-    sendMockedTest,
-    {
-      onSuccess: data => {
-        alert(`Mocked response: ${JSON.stringify(data, null, 2)}`)
-      }
+  const { isPending, mutate, error } = useMutation({
+    mutationKey: [MutationKey.test],
+    mutationFn: sendMockedTest,
+    onSuccess: data => {
+      alert(`Mocked response: ${JSON.stringify(data, null, 2)}`)
     }
-  )
-  const errorMessage = error ? getErrorMessage(error) : undefined
+  })
+  const errorMessage = error ? getErrorMessage({ error }) : undefined
 
   return (
     <Form<TestFormSchema> onSubmit={({ name }) => mutate({ userName: name })}>
@@ -42,17 +40,17 @@ export const TestForm = () => {
                 onChange={e => setValue(e.target.value)}
                 onBlur={onBlur}
                 placeholder="Name"
-                disabled={isLoading}
+                disabled={isPending}
                 label="Name"
                 errorMessage={errors}
               />
             )}
           </Field>
           <Button
-            disabled={isLoading}
+            disabled={isPending}
             type="submit"
           >
-            {isLoading && <LoaderCircle />}Submit
+            {isPending && <LoaderCircle />}Submit
           </Button>
           {errorMessage && (
             <StatusMessage variant="error">{errorMessage}</StatusMessage>

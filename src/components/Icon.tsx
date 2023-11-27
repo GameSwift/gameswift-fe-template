@@ -1,5 +1,5 @@
-import { IconId } from '@/types'
-import { getIconHref } from '@/utils'
+import { type IconId } from '@/types/icons'
+import { getIconHref } from '@/utils/icons'
 
 type IconProps = {
   id: IconId

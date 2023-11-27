@@ -1,5 +1,6 @@
 import { type Metadata } from 'next'
-import { AppName, DefaultSEOTags } from '@/config'
+import { AppName } from '@/config/app'
+import { DefaultSEOTags } from '@/config/seo'
 
 export const getMetadata = ({ title, ...metadata }: Metadata): Metadata => {
   const metaTitle = title ? `${title} | ${AppName}` : AppName

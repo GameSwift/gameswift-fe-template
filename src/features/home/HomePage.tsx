@@ -1,4 +1,4 @@
-import { AppName } from '@/config'
+import { AppName } from '@/config/app'
 import { TestForm } from './components'
 
 export const HomePage = () => (

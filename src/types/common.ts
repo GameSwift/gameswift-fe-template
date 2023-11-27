@@ -4,3 +4,5 @@ export type WithClassName<T = object> = {
 
 export type Undefinedable<T> = T | undefined
 export type Nullable<T> = T | null
+export type Nilable<T> = T | undefined | null
+export type HexString = `0x${string}`

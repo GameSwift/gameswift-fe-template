@@ -1,5 +1,5 @@
 import { Link, Image } from '@/components'
-import { InternalLink } from '@/config'
+import { InternalLink } from '@/config/app'
 import Logo from '@/public/images/shared/logo.webp'
 import { HeaderMenu } from './HeaderMenu'
 

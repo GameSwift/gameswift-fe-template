@@ -1,4 +1,4 @@
-import { cn } from '@/utils'
+import { cn } from '@/utils/styles'
 import { Label } from '../Label'
 import { StatusMessage } from '../StatusMessage'
 import { InputWithIcon } from './InputWithIcon'

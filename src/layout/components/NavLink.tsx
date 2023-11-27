@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { usePathname } from 'next/navigation'
 import { Link } from '@/components'
-import { LinkHref } from '@/types'
+import { type LinkHref } from '@/types/url'
 
 type NavLinkProps = {
   href: LinkHref

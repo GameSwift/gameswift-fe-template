@@ -1,7 +1,7 @@
 import clsx from 'clsx'
-import { Providers } from '@/components'
-import { Layout } from '@/layout'
-import { MainFont, SecondaryFont } from '@/styles'
+import { Layout } from '@/layout/Layout'
+import { Providers } from '@/providers/Providers'
+import { MainFont, SecondaryFont } from '@/styles/fonts'
 import '@/styles/globals.css'
 
 const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => (

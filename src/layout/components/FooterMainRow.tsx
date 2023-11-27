@@ -1,5 +1,5 @@
 import { Image, Link, SocialIcons } from '@/components'
-import { InternalLink, ExternalLink } from '@/config'
+import { InternalLink, ExternalLink } from '@/config/app'
 import Ships from '@/public/images/shared/footer-ships.webp'
 import Logo from '@/public/images/shared/logo-full.webp'
 import { FooterLinksColumn } from './FooterLinksColumn'

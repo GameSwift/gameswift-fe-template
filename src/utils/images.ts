@@ -1,4 +1,4 @@
-import { ImageSrc } from '@/types'
+import { type ImageSrc } from '@/types/images'
 import nextConfig from '../../next.config.mjs'
 import { withHttpsProtocol } from './url'
 

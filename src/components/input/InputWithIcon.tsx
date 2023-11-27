@@ -1,5 +1,5 @@
 import { cva } from 'class-variance-authority'
-import { cn } from '@/utils'
+import { cn } from '@/utils/styles'
 import { InputRaw } from './InputRaw'
 import type { InputWithIconProps } from './types'
 

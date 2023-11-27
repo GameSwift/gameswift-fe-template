@@ -1,6 +1,6 @@
 import { request } from '@/lib/axios'
 import {
-  TestReqSchema,
+  type TestReqSchema,
   testReqSchema,
   testResSchema
 } from './validationSchemas'

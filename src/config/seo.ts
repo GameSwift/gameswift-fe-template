@@ -1,5 +1,5 @@
 import { type Metadata } from 'next'
-import { env } from '@/utils'
+import { env } from '@/utils/env'
 import { AppName } from './app'
 
 export const FaviconURL =

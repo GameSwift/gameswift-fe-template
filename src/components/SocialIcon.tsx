@@ -1,5 +1,6 @@
-import { IconId, WithClassName } from '@/types'
-import { cn } from '@/utils'
+import type { WithClassName } from '@/types/common'
+import type { IconId } from '@/types/icons'
+import { cn } from '@/utils/styles'
 import { Icon } from './Icon'
 import { Link } from './Link'
 

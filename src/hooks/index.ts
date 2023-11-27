@@ -1,1 +1,0 @@
-export { useValidateSearchParams } from './useValidateSearchParams'

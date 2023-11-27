@@ -1,4 +1,4 @@
-import { IconId } from '@/types'
+import { type IconId } from '@/types/icons'
 
 export const iconId = {
   twitter: 'twitter',

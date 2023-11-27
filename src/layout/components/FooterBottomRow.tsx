@@ -1,5 +1,5 @@
-import { AppName } from '@/config'
-import { getCurrentYear } from '@/utils'
+import { AppName } from '@/config/app'
+import { getCurrentYear } from '@/utils/date'
 
 export const FooterBottomRow = () => (
   <div className="layout-section border-t border-t-white/10">
