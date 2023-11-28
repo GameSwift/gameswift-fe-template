@@ -12,6 +12,11 @@ export const Description =
   'A starter for Next.js using app router with TypeScript and Tailwind CSS.'
 
 export const DefaultSEOTags: Metadata = {
+  title: {
+    default: 'GameSwift',
+    template: '%s | GameSwift'
+  },
+  metadataBase: new URL(env.client.NEXT_PUBLIC_APP_BASE_URL),
   description: Description,
   openGraph: {
     type: 'website',
@@ -30,8 +35,8 @@ export const DefaultSEOTags: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: GameSwiftTwitterHandle
+    site: GameSwiftTwitterHandle,
+    images: [OGImageUrl]
   },
-  themeColor: '#1F2128',
   icons: FaviconURL
 }

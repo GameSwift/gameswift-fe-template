@@ -1,8 +1,8 @@
+import type { Metadata } from 'next'
 import { HomePage } from '@/features/home'
-import { getMetadata } from '@/utils/seo'
 
-export const metadata = getMetadata({
+export const metadata: Metadata = {
   title: 'Home'
-})
+}
 
 export default HomePage
