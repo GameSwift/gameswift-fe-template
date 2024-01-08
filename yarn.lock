@@ -728,17 +728,17 @@
   dependencies:
     "@t3-oss/env-core" "0.7.1"
 
-"@tanstack/query-core@5.14.0":
-  version "5.14.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.14.0.tgz#96a88030b7f104a37d42e549dd7453373ba7879f"
-  integrity sha512-OEri9fVDYT8XEqgh/dc6fFp1niyqu+MDY+Vp/LwU+scdk9xQLZ7KdUMEUh/sqTEjRM5BlFzAhAv+EIYcvSxt0Q==
+"@tanstack/query-core@5.17.9":
+  version "5.17.9"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.17.9.tgz#1dac85c7c674bdfd132fe7cd5cb898921000bdcf"
+  integrity sha512-8xcvpWIPaRMDNLMvG9ugcUJMgFK316ZsqkPPbsI+TMZsb10N9jk0B6XgPk4/kgWC2ziHyWR7n7wUhxmD0pChQw==
 
-"@tanstack/react-query@5.14.0":
-  version "5.14.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.14.0.tgz#d2c79ee88f473cd859b9a7885d2f5c33ca3bd749"
-  integrity sha512-+qCooNZr7aGr6a0UEblfEgDSO1y+H7h7JnT4nUlbyfgCGE695lmBiqTciuW1C1Jr6J6Z2bwyd6YmBDKFKszWhA==
+"@tanstack/react-query@5.17.9":
+  version "5.17.9"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.17.9.tgz#74826465c1b2ecde17c6d2f1d03f10b611ac2363"
+  integrity sha512-M5E9gwUq1Stby/pdlYjBlL24euIVuGbWKIFCbtnQxSdXI4PgzjTSdXdV3QE6fc+itF+TUvX/JPTKIwq8yuBXcg==
   dependencies:
-    "@tanstack/query-core" "5.14.0"
+    "@tanstack/query-core" "5.17.9"
 
 "@trivago/prettier-plugin-sort-imports@4.3.0":
   version "4.3.0"
