@@ -44,6 +44,8 @@ RUN addgroup -g 1001 -S nodejs && adduser -S nextjs -u 1001
 
 COPY --from=builder  /src/app/public ./public
 
+RUN mkdir .next && chown nextjs:nodejs .next
+
 COPY --from=builder --chown=nextjs:nodejs  /src/app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs  /src/app/.next/static ./.next/static
 
