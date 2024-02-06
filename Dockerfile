@@ -14,8 +14,7 @@ COPY package.json yarn.lock* ./
 RUN \
   if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
   else echo "Lockfile not found." && exit 1; \
-  fi && \
-  yarn audit --level low
+  fi
 
 FROM node:21-alpine AS builder
 
@@ -32,6 +31,7 @@ COPY --from=deps  /src/app/node_modules ./node_modules
 COPY . .
 
 RUN yarn run lint && \
+    yarn audit --level low && \
     yarn build
 
 FROM node:21-alpine AS runner
