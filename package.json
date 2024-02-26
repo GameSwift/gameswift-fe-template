@@ -18,7 +18,7 @@
     "@mantine/hooks": "7.3.2",
     "@radix-ui/react-slot": "1.0.2",
     "@t3-oss/env-nextjs": "0.7.1",
-    "@tanstack/react-query": "5.14.0",
+    "@tanstack/react-query": "5.24.1",
     "axios": "1.6.2",
     "class-variance-authority": "0.7.0",
     "houseform": "1.11.1",
